@@ -23,30 +23,30 @@
 	},
 	"projects": {
 		"myapp": {
-			"tags": []
+			"tags": ["scope:myapp"]
 		},
 		"myapp-e2e": {
 			"tags": [],
 			"implicitDependencies": ["myapp"]
 		},
 		"ui-card": {
-			"tags": []
+			"tags": ["scope:myapp", "type:ui"]
 		},
 		"types": {
-			"tags": []
+			"tags": ["scope:shared", "type:type"]
 		},
 		"api": {
-			"tags": []
+			"tags": ["scope:api", "type:app"]
 		},
 		"reactapp": {
-			"tags": []
+			"tags": ["scope:reactapp", "type:app"]
 		},
 		"reactapp-e2e": {
 			"tags": [],
 			"implicitDependencies": ["reactapp"]
 		},
 		"ui-web-card": {
-			"tags": []
+			"tags": ["scope:shared", "type:ui"]
 		}
 	}
 }
