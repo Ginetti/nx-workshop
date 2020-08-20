@@ -31,7 +31,8 @@ export const App = () => {
 							<card-content>
 								<card-title>{card.title}</card-title>
 								<card-description>{card.description}</card-description>
-								{/* <card-box color={card.boxColor}></card-box> // TODO */}
+								<card-box className={card.boxColor}></card-box> {/* // TODO */}
+								{/* // TODO */}
 							</card-content>
 						))}
 					</card-wrapper>
