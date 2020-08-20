@@ -1,9 +1,8 @@
 import './app.scss';
+import '@workshop/ui-web-card';
 
 import { ICard } from '@workshop/types';
 import React, { useEffect, useState } from 'react';
-
-import { ReactComponent as Logo } from './logo.svg';
 
 export const App = () => {
 	const [apiResponse, setApiResponse] = useState<ICard[]>([]);
@@ -21,14 +20,22 @@ export const App = () => {
 	 */
 	return (
 		<div className="app">
-			<header className="flex">
-				<Logo width="75" height="75" />
-				<h1>Welcome to reactapp!</h1>
-			</header>
 			<main>
-				<h2>Resources &amp; Tools</h2>
-				<p>Thank you for using and showing some ♥ for Nx.</p>
-				{apiResponse.map((card) => card.title)}
+				<div className="container">
+					<div className="header">
+						<h1>App</h1>
+						<img src="https://nx.dev/assets/images/nx-logo.svg" />
+					</div>
+					<card-wrapper>
+						{apiResponse.map((card) => (
+							<card-content>
+								<card-title>{card.title}</card-title>
+								<card-description>{card.description}</card-description>
+								{/* <card-box color={card.boxColor}></card-box> // TODO */}
+							</card-content>
+						))}
+					</card-wrapper>
+				</div>
 			</main>
 		</div>
 	);

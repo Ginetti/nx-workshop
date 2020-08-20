@@ -1,3 +1,5 @@
+import '@workshop/ui-web-card';
+
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { ICard } from '@workshop/types';

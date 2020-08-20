@@ -272,6 +272,7 @@
 				},
 				"serve": {
 					"builder": "@nrwl/web:dev-server",
+					"port": 4201,
 					"options": {
 						"buildTarget": "reactapp:build",
 						"proxyConfig": "apps/myapp/proxy.conf.json"
@@ -324,6 +325,30 @@
 						"linter": "eslint",
 						"tsConfig": ["apps/reactapp-e2e/tsconfig.e2e.json"],
 						"exclude": ["**/node_modules/**", "!apps/reactapp-e2e/**/*"]
+					}
+				}
+			}
+		},
+		"ui-web-card": {
+			"root": "libs/ui-web-card",
+			"sourceRoot": "libs/ui-web-card/src",
+			"projectType": "library",
+			"schematics": {},
+			"architect": {
+				"lint": {
+					"builder": "@nrwl/linter:lint",
+					"options": {
+						"linter": "eslint",
+						"tsConfig": ["libs/ui-web-card/tsconfig.lib.json", "libs/ui-web-card/tsconfig.spec.json"],
+						"exclude": ["**/node_modules/**", "!libs/ui-web-card/**/*"]
+					}
+				},
+				"test": {
+					"builder": "@nrwl/jest:jest",
+					"options": {
+						"jestConfig": "libs/ui-web-card/jest.config.js",
+						"tsConfig": "libs/ui-web-card/tsconfig.spec.json",
+						"passWithNoTests": true
 					}
 				}
 			}

@@ -4,5 +4,11 @@
 		<img src="https://nx.dev/assets/images/nx-logo.svg" />
 	</div>
 
-	<workshop-card [cards]="cards$ | async"></workshop-card>
+	<card-wrapper>
+		<card-content *ngFor="let card of cards$ | async">
+			<card-title>{{ card.title }}</card-title>
+			<card-description>{{ card.description }}</card-description>
+			<card-box [attr.color]="card.boxColor"></card-box>
+		</card-content>
+	</card-wrapper>
 </div>

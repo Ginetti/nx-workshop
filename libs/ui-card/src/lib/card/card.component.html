@@ -2,6 +2,7 @@
 	<div *ngFor="let card of cards" class="card">
 		<div class="title">{{ card.title }}</div>
 		<span class="description">{{ card.description }}</span>
+		{{ card.boxColor }}
 		<span class="box" [ngClass]="card.boxColor"></span>
 	</div>
 </div>

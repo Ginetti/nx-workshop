@@ -44,6 +44,9 @@
 		"reactapp-e2e": {
 			"tags": [],
 			"implicitDependencies": ["reactapp"]
+		},
+		"ui-web-card": {
+			"tags": []
 		}
 	}
 }
